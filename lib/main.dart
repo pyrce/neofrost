@@ -1,0 +1,67 @@
+import 'package:english_words/english_words.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import "Menu1.dart";
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'Neofrost',
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.purple,
+            ),
+          useMaterial3: true,
+          scaffoldBackgroundColor: Color(0x0A0A0A),
+          textTheme: TextTheme(
+            titleLarge: GoogleFonts.oswald(
+              fontSize: 30
+
+            ),
+
+          ),
+        )
+        ,
+
+        home: MyHomePage(),
+      ),
+    );
+  }
+}
+
+class MyAppState extends ChangeNotifier {
+  var current = WordPair.random();
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+
+    return Scaffold(
+        appBar: AppBar(title: const Text('Neofrost'),  actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.add_alert),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(const SnackBar(content: Text('This is a snackbar')));
+            },
+          )
+ ,
+        ]),
+      body: Menu1(title:"home"),
+    );
+  }
+}
