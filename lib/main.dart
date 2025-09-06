@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import "Menu1.dart";
+import "Menu2.dart";
 void main() {
   runApp(MyApp());
 }
@@ -38,19 +39,8 @@ class MyHomePage extends StatelessWidget {
 
 
     return Scaffold(
-        appBar: AppBar(title:  Text('Neofrost'),  actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.add_alert),
-            tooltip: 'Show Snackbar',
-            onPressed: () {
-              ScaffoldMessenger.of(
-                context,
-              ).showSnackBar(const SnackBar(content: Text('This is a snackbar')));
-            },
-          )
- ,
-        ]),
-      body: Menu1(title:"home"),
+        appBar: AppBar(title:  Text('Neofrost')),
+      body: Menu2(title:"home"),
     );
   }
 }

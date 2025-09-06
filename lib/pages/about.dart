@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:flutter_map/flutter_map.dart';
 
 class About extends StatelessWidget {
   About(
@@ -14,7 +14,8 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flex(direction: Axis.vertical, // Horizontal layout
-      children:[  Card(
+      children:[
+        Card(
         color: Color(0xFF00FF),
          child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -104,8 +105,29 @@ class About extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
 
+
+        Card(
+
+          child: Container(
+              height:600,
+              child: FlutterMap(
+            options: const MapOptions(
+              initialZoom: 1.0,
+              maxZoom: 50.0
+            ),
+            children: [
+              TileLayer(
+                urlTemplate:
+                'https://www.openstreetmap.org/#map=19/-21.3386498/55.4758335',
+                userAgentPackageName: 'com.example.app',
+              ),
+            ],
+          )
+          )
+         ,
+              )
 
 
 
