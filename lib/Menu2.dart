@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import "pages/dessert_tab_filter.dart";
 import "pages/about.dart";
+import "pages/Contact.dart";
 
 class Menu2 extends StatelessWidget {
   Menu2(
@@ -20,24 +21,22 @@ class Menu2 extends StatelessWidget {
       {'label': 'Products','page':DessertTabFilter(), 'button': 'assets/images/creme-glacee.png'},
       {'label': 'Map', 'page':DessertTabFilter(),'button': 'assets/images/carte.png'},
       {'label': 'About Us','page':About(), 'button': 'assets/images/a-propos-de-nous.png'},
-      {'label': 'Contact','page':DessertTabFilter(), 'button': 'assets/images/poster.png'},
+      {'label': 'Contact','page':ContactFormPage(), 'button': 'assets/images/poster.png'},
       {'label': 'CGU', 'page':DessertTabFilter(),'button': 'assets/images/termes-et-conditions.png'},
       {'label': 'News','page':DessertTabFilter(), 'button': 'assets/images/termes-et-conditions.png'},
     ];
 
 
-    return MaterialApp(
-      home: Scaffold(
-       // appBar: AppBar(title: Text('Grille Navigation')),
-        body:  GridView.count(
+    return
+       GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 16,
             mainAxisSpacing: 16,
             children: items.map((item) {
               return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+
                 children: [
-                  ElevatedButton(
+                  TextButton(
                    style:ElevatedButton.styleFrom( shadowColor: Colors.transparent.withOpacity(0.0)),
                     onPressed: () {
                       Navigator.push(
@@ -45,16 +44,17 @@ class Menu2 extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => item['page']),
                       );
                     },
-                    child: Image.asset(item['button']!),
+                    child:Container(width:100,padding: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset(item['button'])),
+
                   ),
-                  SizedBox(height: 8),
-                  Text(item['label']!, style: TextStyle(fontSize: 16)),
+
+                 Container(child: Text(item['label']!, style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) )) ),
                 ],
               );
             }).toList(),
-          ),
 
-      ),
+
+
     );
   }
 }

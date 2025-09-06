@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
             scaffoldBackgroundColor: Color(0x0A0A0A),
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+          fontFamily: GoogleFonts.orbitron().fontFamily,
         ),
         home: MyHomePage(),
       )
@@ -40,7 +41,7 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(title:  Text('Neofrost')),
-      body: Menu2(title:"home"),
+      body: Menu1(title:"home"),
     );
   }
 }

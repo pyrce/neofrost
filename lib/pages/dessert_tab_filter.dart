@@ -60,7 +60,7 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
           controller: _tabController,
           isScrollable: true,
           labelColor: Theme.of(context).primaryColor,
-          unselectedLabelColor: Color(0xE0E0E0),
+
 
         indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(8.0),

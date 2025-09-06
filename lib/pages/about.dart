@@ -24,7 +24,8 @@ class About extends StatelessWidget {
                 children: <Widget>[
                   Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/creme-glacee.png")),
                   Column(children:[
-   Text("temporal flux",style:TextStyle(color:Color(0x1E1E1E) )) ,  Text("8h00-17h00",style:TextStyle(color:Color(0x1E1E1E)))
+                    Container(child: Text("Temporal flux", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
+                    Container(child: Text("8h00-17h00", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )
                   ]
                   )
                 ],
@@ -43,8 +44,8 @@ class About extends StatelessWidget {
                 children: <Widget>[
                   Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/marque-de-localisation.png")),
                   Column(children:[
-                    Text("ServiceZone",style:TextStyle(color:Color(0x1E1E1E))),  Text("10 rue de glace",style:TextStyle(color:Color(0x1E1E1E)))
-                  ]
+                    Container(child: Text("Contact channel", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
+                    Container(child: Text("01 23 45 67 89", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )                  ]
                   )
                 ],
               ),
@@ -61,8 +62,8 @@ class About extends StatelessWidget {
                 children: <Widget>[
                   Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/creme-glacee.png")),
                   Column(children:[
-    Text("Contact channel",style:TextStyle(color:Color(0x1E1E1E))), Text("01 23 45 67 89",style:TextStyle(color:Color(0x1E1E1E)))
-
+                    Container(child: Text("Service zone", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
+                    Container(child: Text("1à rue de glace", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )
                 ]  )]
                 ,
               ),
@@ -80,8 +81,8 @@ class About extends StatelessWidget {
                 children: <Widget>[
                   Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/creme-glacee.png")),
                   Column(children:[
-    Text("temporal flux",style:TextStyle(color:Color(0x1E1E1E))), Text("temporal flux",style:TextStyle(color:Color(0x1E1E1E)))
-                  ]
+                    Container(child: Text("Instagram", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
+                    Container(child: Text("instagram", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )                  ]
                   )
                 ],
               ),
@@ -98,8 +99,8 @@ class About extends StatelessWidget {
                 children: <Widget>[
                   Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/creme-glacee.png")),
                   Column(children:[
-    Text("temporal flux",style:TextStyle(color:Color(0x1E1E1E))), Text("temporal flux",style:TextStyle(color:Color(0x1E1E1E)))
-                  ]
+                    Container(child: Text("Facebook", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
+                    Container(child: Text("facebook", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )                  ]
                   )
                 ],
               ),
@@ -111,7 +112,7 @@ class About extends StatelessWidget {
         Card(
 
           child: Container(
-              height:600,
+              height:400,
               child: FlutterMap(
             options: const MapOptions(
               initialZoom: 1.0,
