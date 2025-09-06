@@ -16,25 +16,14 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Neofrost',
+        title: 'Namer App',
         theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.purple,
-            ),
           useMaterial3: true,
-          scaffoldBackgroundColor: Color(0x0A0A0A),
-          textTheme: TextTheme(
-            titleLarge: GoogleFonts.oswald(
-              fontSize: 30
-
-            ),
-
-          ),
-        )
-        ,
-
+            scaffoldBackgroundColor: Color(0x0A0A0A),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        ),
         home: MyHomePage(),
-      ),
+      )
     );
   }
 }
@@ -49,7 +38,7 @@ class MyHomePage extends StatelessWidget {
 
 
     return Scaffold(
-        appBar: AppBar(title: const Text('Neofrost'),  actions: <Widget>[
+        appBar: AppBar(title:  Text('Neofrost'),  actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add_alert),
             tooltip: 'Show Snackbar',
