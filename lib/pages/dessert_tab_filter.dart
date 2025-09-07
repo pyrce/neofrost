@@ -27,14 +27,14 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
   ];
 
   final List<Dessert> allDesserts = [
-    Dessert(nom: 'Fraisier', image: "assets/images/creme-glacee.png", type: 'Cake'),
-    Dessert(nom: 'Opéra', image: "assets/images/creme-glacee.png", type: 'Cake'),
-    Dessert(nom: 'vanilla ice cream', image: "assets/images/creme-glacee.png", type: 'ice cream'),
-    Dessert(nom: 'Cookie au chocolat', image: "assets/images/creme-glacee.png", type: 'Biscuits'),
+    Dessert(nom: 'Fraisier', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
+    Dessert(nom: 'Opéra', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
+    Dessert(nom: 'vanilla ice cream', image: "assets/images/cornet-de-glace.png", type: 'ice cream'),
+    Dessert(nom: 'Cookie au chocolat', image: "assets/images/biscuits.png", type: 'Biscuits'),
     Dessert(nom: 'Brownie chocolat noir', image: "assets/images/creme-glacee.png", type: 'Chocolate'),
-    Dessert(nom: 'citrus tarte', image: "assets/images/creme-glacee.png", type: 'Cake'),
+    Dessert(nom: 'citrus tarte', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
     Dessert(nom: 'strawberry ice cream', image: "assets/images/creme-glacee.png", type: 'ice cream'),
-    Dessert(nom: 'Sablé breton', image: "assets/images/creme-glacee.png", type: 'Biscuits'),
+    Dessert(nom: 'Sablé breton', image: "assets/images/biscuits.png", type: 'Biscuits'),
     Dessert(nom: 'Tablette de chocolat', image: "assets/images/creme-glacee.png", type: 'Chocolate'),
   ];
 
@@ -54,42 +54,53 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Scaffold(
+        appBar: AppBar(title:  Text('Neofrost')),
+        body:Column(
       children: [
       Material(child:  TabBar(
           controller: _tabController,
           isScrollable: true,
-          labelColor: Theme.of(context).primaryColor,
+
 
 
         indicator: BoxDecoration(
-          borderRadius: BorderRadius.circular(8.0),
-         color:Color(0x1E1E1E)
+          color: Color(0xFFFF00FF),
+         // borderRadius: BorderRadius.circular(10),
         ),
+        unselectedLabelColor:Color(0xFFE0E0E0),
+
+            labelColor :Color(0xFFE0E0E0),
+        overlayColor: MaterialStateProperty.all(Colors.white),
+        indicatorSize: TabBarIndicatorSize.label,
+        indicatorWeight: 0.0,
           tabs: categories.map((c) => Tab(text: c)).toList(),
         )),
         SizedBox(
-          height: 400, // Ajuste la hauteur selon tes besoins
+          height: MediaQuery.of(context).size.height-200, // Ajuste la hauteur selon tes besoins
           child: TabBarView(
             controller: _tabController,
 
             children: categories.map((category) {
               final desserts = getFilteredDesserts(category);
-              return ListView.builder(
+              return ListView.separated(
                 itemCount: desserts.length,
+                  separatorBuilder: (context, index) {
+                    return Divider();
+                  },
                 itemBuilder: (context, index) {
                   final d = desserts[index];
-                  return    Material(child: ListTile(
-                    leading:    Container(width:40, child:Image.asset(d.image)),
-                    title: Text(d.nom),
-                    subtitle: Text(d.type),
-                  ));
+                  return    ListTile(
+                    leading:    Container(width:70, child:Image.asset(d.image)),
+                    title: Text(d.nom,style:TextStyle(fontSize:20,color:Color(0xFF00FFFF)) ) ,
+                    subtitle: Text(d.type,style:TextStyle(fontSize:20,color:Color(0xFFE0E0E0))),
+                  );
                 },
               );
             }).toList(),
           ),
         ),
       ],
-    );
+    ));
   }
 }
