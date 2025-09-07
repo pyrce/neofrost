@@ -5,6 +5,10 @@ import "pages/dessert_tab_filter.dart";
 import "pages/about.dart";
 import "pages/Contact.dart";
 import "pages/CGU.dart";
+import "pages/news.dart";
+import "pages/News/Fairs.dart";
+
+
 class Menu1 extends StatelessWidget {
   Menu1(
       {this.title,
@@ -22,7 +26,7 @@ class Menu1 extends StatelessWidget {
     {'label': 'About Us','page':About(), 'button': 'assets/images/a-propos-de-nous.png'},
     {'label': 'Contact','page':ContactFormPage(), 'button': 'assets/images/poster.png'},
     {'label': 'CGU', 'page':TermesOfSales(),'button': 'assets/images/termes-et-conditions.png'},
-    {'label': 'News','page':DessertTabFilter(), 'button': 'assets/images/termes-et-conditions.png'},
+    {'label': 'News','page':News(), 'button': 'assets/images/termes-et-conditions.png'},
   ];
 
 
@@ -35,7 +39,9 @@ class Menu1 extends StatelessWidget {
           itemCount: items.length,
           itemBuilder: (BuildContext context, int index) {
           return
-         Card(child:  ElevatedButton(
+         Card(shape: RoundedRectangleBorder(
+           borderRadius: BorderRadius.circular(30.0),
+         ),child:  ElevatedButton(
               style:ElevatedButton.styleFrom( minimumSize: Size(100, 60),backgroundColor:Color(0xFF1E1E1E),foregroundColor:Color(0xFFFF00FF) ),
               onPressed: () {
                 Navigator.push(
@@ -46,7 +52,7 @@ class Menu1 extends StatelessWidget {
               child:Row( children:[
 
                 Container(width:40, margin: new EdgeInsets.symmetric(horizontal: 20.0),child:Image.asset(items[index]["button"])),
-                Container(child: Text(items[index]["label"], style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) )) )
+                  Container(child: Text(items[index]["label"], style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) )) )
               ]
 
               )

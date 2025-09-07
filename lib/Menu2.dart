@@ -19,10 +19,10 @@ class Menu2 extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> items = [
       {'label': 'Products','page':DessertTabFilter(), 'button': 'assets/images/creme-glacee.png'},
-      {'label': 'Map', 'page':DessertTabFilter(),'button': 'assets/images/carte.png'},
+    //  {'label': 'Map', 'page':DessertTabFilter(),'button': 'assets/images/carte.png'},
       {'label': 'About Us','page':About(), 'button': 'assets/images/a-propos-de-nous.png'},
       {'label': 'Contact','page':ContactFormPage(), 'button': 'assets/images/poster.png'},
-      {'label': 'CGU', 'page':DessertTabFilter(),'button': 'assets/images/termes-et-conditions.png'},
+      {'label': 'Terms of sales', 'page':DessertTabFilter(),'button': 'assets/images/termes-et-conditions.png'},
       {'label': 'News','page':DessertTabFilter(), 'button': 'assets/images/termes-et-conditions.png'},
     ];
 
@@ -44,7 +44,7 @@ class Menu2 extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => item['page']),
                       );
                     },
-                    child:Container(width:100,padding: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset(item['button'])),
+                    child:Container(width:140,padding: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset(item['button'])),
 
                   ),
 

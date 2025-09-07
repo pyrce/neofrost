@@ -41,7 +41,7 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(title:  Text('Neofrost')),
-      body: Menu1(title:"home"),
+      body: Menu2(title:"home"),
     );
   }
 }
