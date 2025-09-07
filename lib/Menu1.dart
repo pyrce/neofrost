@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import "pages/dessert_tab_filter.dart";
 import "pages/about.dart";
 import "pages/Contact.dart";
-
+import "pages/CGU.dart";
 class Menu1 extends StatelessWidget {
   Menu1(
       {this.title,
@@ -21,7 +21,7 @@ class Menu1 extends StatelessWidget {
    // {'label': 'Map', 'page':About(),'button': 'assets/images/carte.png'},
     {'label': 'About Us','page':About(), 'button': 'assets/images/a-propos-de-nous.png'},
     {'label': 'Contact','page':ContactFormPage(), 'button': 'assets/images/poster.png'},
-    {'label': 'CGU', 'page':DessertTabFilter(),'button': 'assets/images/termes-et-conditions.png'},
+    {'label': 'CGU', 'page':TermesOfSales(),'button': 'assets/images/termes-et-conditions.png'},
     {'label': 'News','page':DessertTabFilter(), 'button': 'assets/images/termes-et-conditions.png'},
   ];
 

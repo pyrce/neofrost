@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
+
 
 class About extends StatelessWidget {
   About(
@@ -13,7 +15,14 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flex(direction: Axis.vertical, // Horizontal layout
+
+
+    return
+
+      Scaffold(
+          appBar: AppBar(title:Row(children:[Text("Neofrost  "),Text("about us", style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) ))])),
+          body:Column(
+              children: [   Flex(direction: Axis.vertical, // Horizontal layout
       children:[
         Card(
         color: Color(0xFF00FF),
@@ -79,7 +88,7 @@ class About extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/creme-glacee.png")),
+                  Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/instagram.png")),
                   Column(children:[
                     Container(child: Text("Instagram", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
                     Container(child: Text("instagram", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )                  ]
@@ -97,7 +106,7 @@ class About extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/creme-glacee.png")),
+                  Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/facebook.png")),
                   Column(children:[
                     Container(child: Text("Facebook", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
                     Container(child: Text("facebook", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )                  ]
@@ -107,7 +116,23 @@ class About extends StatelessWidget {
             ],
           ),
         ),
-
+        Card(
+          color: Color(0xFF00FF),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Container(width:40,margin: new EdgeInsets.symmetric(horizontal: 20.0), child:Image.asset("assets/images/linkedin.png")),
+                  Column(children:[
+                    Container(child: Text("LinkedIn", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) ) ,
+                    Container(child: Text("LinkedIn", style: TextStyle(fontSize: 18,color:Color(0xFFE0E0E0) )) )                  ]
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
 
         Card(
 
@@ -115,14 +140,17 @@ class About extends StatelessWidget {
               height:400,
               child: FlutterMap(
             options: const MapOptions(
-              initialZoom: 1.0,
-              maxZoom: 50.0
+                initialCenter: LatLng(-21.3386498,55.4758335),
+              initialZoom: 15.0,
+              maxZoom: 20.0
             ),
             children: [
               TileLayer(
                 urlTemplate:
-                'https://www.openstreetmap.org/#map=19/-21.3386498/55.4758335',
-                userAgentPackageName: 'com.example.app',
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                subdomains: const ['a', 'b', 'c'],
+                userAgentPackageName: 'dev.neofrost',
+                  tileProvider:  NetworkTileProvider()
               ),
             ],
           )
@@ -133,6 +161,6 @@ class About extends StatelessWidget {
 
 
       ]
-    );
+              )]));
   }
 }
