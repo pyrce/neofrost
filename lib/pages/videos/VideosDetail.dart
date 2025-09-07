@@ -13,10 +13,11 @@ class VideosDetail extends StatelessWidget {
 
       Scaffold(
           appBar: AppBar(title: Row(children: [
-            Text("Neofrost  "),
+            Text("Neofrost  ",  style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF))),
             Text("Videos",
-                style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF)))
-          ])),
+                style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF)) )
+          ]),toolbarHeight: 100,backgroundColor:Color(0x0A0A0A)
+          ),
           body:Column(
               children:[
              Container(child:   Text(video!.title,style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) ) ) ),

@@ -20,7 +20,10 @@ class About extends StatelessWidget {
     return
 
       Scaffold(
-          appBar: AppBar(title:Row(children:[Text("Neofrost  "),Text("about us", style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) ))])),
+          appBar: AppBar(title:Row(children:[Text("Neofrost  ", style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) )),
+            Text("about us", style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) ))]),
+              toolbarHeight: 100,backgroundColor:Color(0x0A0A0A)
+          ),
           body:Column(
               children: [   Flex(direction: Axis.vertical, // Horizontal layout
       children:[

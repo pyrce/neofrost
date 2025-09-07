@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
 
 
     return Scaffold(
-        appBar: AppBar(title:  Text('Neofrost')),
+        appBar: AppBar(title:  Text('Neofrost',style:TextStyle(fontSize:30,color:Color(0xFFE0E0E0))),toolbarHeight: 100,backgroundColor:Color(0x0A0A0A) ),
       body: Menu2(title:"home"),
     );
   }

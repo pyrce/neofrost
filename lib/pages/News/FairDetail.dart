@@ -13,10 +13,12 @@ class FairDetail extends StatelessWidget {
 
       Scaffold(
           appBar: AppBar(title: Row(children: [
-            Text("Neofrost  "),
-            Text("Fairs",
-                style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF)))
-          ])),
+            Text("Neofrost  ", style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF))),
+            Text("Fairs details",
+                style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF)) )
+          ]),
+              toolbarHeight: 100,backgroundColor:Color(0x0A0A0A)
+          ),
           body:Column(
               children:[
              Container(child:   Text(fair!.title,style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) ) ) ),

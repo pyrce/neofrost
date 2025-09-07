@@ -22,10 +22,12 @@ class Articles extends StatelessWidget {
 
       Scaffold(
           appBar: AppBar(title: Row(children: [
-            Text("Neofrost  "),
+            Text("Neofrost  ", style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF))),
             Text("Articles",
-                style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF)))
-          ])),
+                style: TextStyle(fontSize: 24, color: Color(0xFFFF00FF)) )
+          ]),
+              toolbarHeight: 100,backgroundColor:Color(0x0A0A0A)
+          ),
           body:ListView.builder(
               shrinkWrap: true,
 

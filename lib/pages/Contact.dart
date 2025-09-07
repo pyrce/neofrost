@@ -35,7 +35,9 @@ class _ContactFormPageState extends State<ContactFormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Row(children:[Text("Neofrost  "),Text("contact", style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) ))])),
+      appBar: AppBar(title:Row(children:[Text("Neofrost  ",style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) )),
+        Text("contact", style: TextStyle(fontSize: 24,color:Color(0xFFFF00FF) ) )]),
+          toolbarHeight: 100,backgroundColor:Color(0x0A0A0A)  ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(

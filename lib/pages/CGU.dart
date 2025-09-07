@@ -14,10 +14,11 @@ class TermesOfSales extends StatelessWidget {
 
       Scaffold(
           appBar: AppBar(title: Row(children: [
-            Text("Neofrost  "),
+            Text("Neofrost  ",   style: TextStyle(fontSize: 24, color: Color(0xFFE0E0E0)) ),
             Text("about us",
                 style: TextStyle(fontSize: 24, color: Color(0xFFE0E0E0)) )
-          ])),
+          ]),toolbarHeight: 100,backgroundColor:Color(0x0A0A0A))
+          ,
           body:ListView(children:[
             Text("Terms and Conditions of Sale – Neofrost", style: TextStyle(fontSize: 24, color: Color(0xFFE0E0E0))),
             Text(""),

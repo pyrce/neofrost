@@ -55,7 +55,8 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title:  Text('Neofrost')),
+        appBar: AppBar(title:  Text('Neofrost',
+            style:TextStyle(fontSize:30,color:Color(0xFFE0E0E0))),toolbarHeight: 100,backgroundColor:Color(0x0A0A0A)),
         body:Column(
       children: [
       Material(child:  TabBar(
@@ -68,9 +69,9 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
           color: Color(0xFFFF00FF),
          // borderRadius: BorderRadius.circular(10),
         ),
-        unselectedLabelColor:Color(0xFFE0E0E0),
+        unselectedLabelColor:Color(0xFF1E1E1E),
 
-            labelColor :Color(0xFFE0E0E0),
+            labelColor :Color(0xFF1E1E1E),
         overlayColor: MaterialStateProperty.all(Colors.white),
         indicatorSize: TabBarIndicatorSize.label,
         indicatorWeight: 0.0,
