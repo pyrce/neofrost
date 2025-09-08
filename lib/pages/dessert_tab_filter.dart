@@ -27,7 +27,7 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
   ];
 
   final List<Dessert> allDesserts = [
-    Dessert(nom: 'Fraisier', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
+    Dessert(nom: 'Strawberry pie', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
     Dessert(nom: 'Opéra', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
     Dessert(nom: 'vanilla ice cream', image: "assets/images/cornet-de-glace.png", type: 'ice cream'),
     Dessert(nom: 'Chocolate cookie', image: "assets/images/biscuits.png", type: 'Biscuits'),
@@ -35,7 +35,7 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
     Dessert(nom: 'citrus pie', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
     Dessert(nom: 'strawberry ice cream', image: "assets/images/creme-glacee.png", type: 'ice cream'),
     Dessert(nom: 'Breton shortbread', image: "assets/images/biscuits.png", type: 'Biscuits'),
-    Dessert(nom: 'Tablette de chocolat', image: "assets/images/creme-glacee.png", type: 'Chocolate'),
+    Dessert(nom: 'Chocolate bar', image: "assets/images/creme-glacee.png", type: 'Chocolate'),
   ];
 
   @override
