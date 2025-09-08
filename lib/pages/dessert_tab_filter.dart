@@ -30,11 +30,11 @@ class _DessertTabFilterState extends State<DessertTabFilter> with SingleTickerPr
     Dessert(nom: 'Fraisier', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
     Dessert(nom: 'Opéra', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
     Dessert(nom: 'vanilla ice cream', image: "assets/images/cornet-de-glace.png", type: 'ice cream'),
-    Dessert(nom: 'Cookie au chocolat', image: "assets/images/biscuits.png", type: 'Biscuits'),
-    Dessert(nom: 'Brownie chocolat noir', image: "assets/images/creme-glacee.png", type: 'Chocolate'),
-    Dessert(nom: 'citrus tarte', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
+    Dessert(nom: 'Chocolate cookie', image: "assets/images/biscuits.png", type: 'Biscuits'),
+    Dessert(nom: 'Dark chocolate', image: "assets/images/creme-glacee.png", type: 'Chocolate'),
+    Dessert(nom: 'citrus pie', image: "assets/images/gateau-de-mariage.png", type: 'Cake'),
     Dessert(nom: 'strawberry ice cream', image: "assets/images/creme-glacee.png", type: 'ice cream'),
-    Dessert(nom: 'Sablé breton', image: "assets/images/biscuits.png", type: 'Biscuits'),
+    Dessert(nom: 'Breton shortbread', image: "assets/images/biscuits.png", type: 'Biscuits'),
     Dessert(nom: 'Tablette de chocolat', image: "assets/images/creme-glacee.png", type: 'Chocolate'),
   ];
 
